@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="weather_container">
+        <h1 class="empty_error">Weather App</h1>
+        <div class="top_container">
+        <div class="input_box">
+            <input type="text" placeholder="Enter City" class="input_text_box">
+        </div>
+        <button class="search_btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        </div>
+        <div class="location-not-found">
+            <h2 style="font-size: 40px; margin:30px 0;">Sorry Location not found</h2>
+            <img src="/404.png" alt="" style="width:70%;">
+        </div>
+        <div class="bottom_container">
+            <div class="weather_img">
+            <img src="/clear.png" alt="" class="weather_img_box">
+            </div>
+            <div class="container-one">
+                <p class="degree_temp">31<sup>°C</sup></p>
+                <p class="temp_wind">Haze</p>
+            </div> 
+            <div class="container_two">
+                <div class="left">
+                <div class="left_img">
+                    <img src="" class="fa-solid fa-droplet" alt="">
+                </div>
+                <div class="left_container">
+                    <p class="humidity">70%</p>
+                    <p class="description">Humidity</p>
+                </div>
+                </div>
+                <div class="right">
+                <div class="right_img">
+                    <img src="" class="fa-solid fa-wind" alt="">
+                </div>
+                <div class="right_container">
+                    <p class="wind-speed">514km/H</p>
+                    <p>Windspeed</p>
+                </div>
+                </div>
+            </div>
+            <div class="container-two"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Parent_counter{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Parent_counter">
+<h1 class="counter_fix">0</h1>
+<div class="btn_container">
+    <button class="btn increase_btn">Increase</button>
+    <button class="btn reset_btn">Reset</button>
+    <button class="btn decrease_btn">decrease</button>
+</div>
+    </div>
+    <script>
+        // normal method 
+let counterFix = document.querySelector('.counter_fix');
+//let IncBtn = document.querySelector('.increase_btn');
+//let DecBtn = document.querySelector('.decrease_btn');
+//let ResetBtn = document.querySelector('.reset_btn');
+
+// let counter = 0;
+
+
+
+// IncBtn.addEventListener("click",(()=>{
+//     counter++;
+//     counterFix.innerHTML = counter;
+//     counterFix.style.color = 'green';
+// }))
+// ResetBtn.addEventListener("click",(()=>{
+//     counter = 0;
+//     counterFix.innerHTML = counter;
+//     counterFix.style.color = 'black';
+// }))
+
+// DecBtn.addEventListener("click",(()=>{
+//     counter --;
+//     counterFix.innerHTML = counter;
+//     counterFix.style.color = 'red';
+// }))
+
+// advance method
+
+let counter = 0;
+
+let CounterAll = document.querySelectorAll(".btn");
+
+CounterAll.forEach((btn)=>{
+btn.addEventListener('click',((e)=>{
+let styles = e.currentTarget.classList//e.currentTarget.classList → Returns a list of all classes applied to that button.
+if(styles.contains('increase_btn')){
+    counter++
+    counterFix.textContent = counter;
+    
+}
+else if(styles.contains('decrease_btn')){
+    counter--
+    counterFix.textContent = counter;
+}
+else if(styles.contains('reset_btn')){
+    counter = 0;
+    counterFix.textContent = counter;
+    
+}
+
+if(counter>0){
+    counterFix.style.color = 'green';
+}
+else if (counter<0){
+    counterFix.style.color = 'red';
+}
+else{
+    counterFix.style.color = 'black';
+    
+}
+}))
+})
+
+console.log(CounterAll);
+
+
+    </script>
+</body>
+</html>
